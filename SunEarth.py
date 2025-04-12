@@ -21,7 +21,7 @@ yp = [y]
 while True:
     Fg = G * mA * mZ / pow(r, 2)
     # debugging:
-    print("Fg: " + str(Fg) + " vX: " + str(vX) + " vY: " + str(vY) + " x: " + str(x) + " y: " + str(y))
+    # print("Fg: " + str(Fg) + " vX: " + str(vX) + " vY: " + str(vY) + " x: " + str(x) + " y: " + str(y))
     # x direction:
     Fx = -Fg * x / r
     aX = Fx / mA
@@ -45,8 +45,7 @@ while True:
     if t >= 366*24*3600: # seconds in a year
         break
 
-# debugging:
-print("radius between the Earth and the Sun after a year: " + str(r - 6.371*10**6 - 6.957*10**8))
+
 # Plotting:
 fig, ax = plt.subplots()
 ax.plot(xp,yp)  
